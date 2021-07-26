@@ -40,7 +40,7 @@ func handleOneImage(fileFullName string) {
 	utils.CheckErr(err)
 
 	//left
-	subImage, err := libs.ImageCopy(rawImage, 0, 78, 188, 606)
+	subImage, err := libs.ImageCopy(rawImage, 0, 78, 97, 606)
 	utils.CheckErr(err)
 
 	subImagePath := outputPath + "/" + fileName + "_left.png"
@@ -48,7 +48,7 @@ func handleOneImage(fileFullName string) {
 	utils.CheckErr(err)
 
 	//right
-	subImage, err = libs.ImageCopy(rawImage, 266, 86, 1029, 580)
+	subImage, err = libs.ImageCopy(rawImage, 221, 86, 1029, 580)
 	utils.CheckErr(err)
 
 	subImagePath = outputPath + "/" + fileName + "_right.png"
