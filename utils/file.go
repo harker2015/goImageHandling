@@ -2,6 +2,8 @@ package utils
 
 import (
 	"io/ioutil"
+	"path"
+	"strings"
 )
 
 func GetFileList(path string) []string {
@@ -16,4 +18,11 @@ func GetFileList(path string) []string {
 		}
 	}
 	return result
+}
+
+func GetFileNameWithoutExt(fullFilename string) string {
+	filenameWithSuffix := path.Base(fullFilename)
+	fileSuffix := path.Ext(filenameWithSuffix)
+	filenameOnly := strings.TrimSuffix(filenameWithSuffix, fileSuffix)
+	return filenameOnly
 }
