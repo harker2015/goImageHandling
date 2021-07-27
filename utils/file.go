@@ -2,6 +2,7 @@ package utils
 
 import (
 	"io/ioutil"
+	"os"
 	"path"
 	"strings"
 )
@@ -25,4 +26,9 @@ func GetFileNameWithoutExt(fullFilename string) string {
 	fileSuffix := path.Ext(filenameWithSuffix)
 	filenameOnly := strings.TrimSuffix(filenameWithSuffix, fileSuffix)
 	return filenameOnly
+}
+
+func PathExists(path string) bool {
+	_, err := os.Stat(path)
+	return err == nil
 }
