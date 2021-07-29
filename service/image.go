@@ -42,6 +42,9 @@ func CutOneImage(fileFullName string, outputPath string) {
 }
 
 // merge three images
+//                   18
+//18   144   14 1006/575 18
+//                   14
 func MergeImage(left, rightTop, rightBottom string, newImagePath string) {
 	newImage := image.NewRGBA(image.Rect(0, 0, 1200, 1200))
 	blue := color.RGBA{255, 255, 255, 255}
